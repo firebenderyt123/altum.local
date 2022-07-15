@@ -1,0 +1,673 @@
+/*
+Theme Name: Twenty Twenty-Two
+Theme URI: https://wordpress.org/themes/twentytwentytwo/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.
+Requires at least: 5.9
+Tested up to: 6.0
+Requires PHP: 5.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentytwo
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+Twenty Twenty-Two WordPress Theme, (C) 2021 WordPress.org
+Twenty Twenty-Two is distributed under the terms of the GNU GPL.
+*/
+
+@import 'https://fonts.google.com/specimen/Montserrat';
+
+body {
+	margin: 0 3.125%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Montserrat;
+	color: #323232;
+}
+
+a, span, p, mark, code, select {
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 28px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #323232;
+}
+
+/* header */
+header {
+	padding: 35px 0 23px 0;
+    height: 50px;
+}
+.header {
+	height: 100%;
+	display: flex;
+}
+
+header .button-block {
+	gap: 50px!important;
+}
+header nav .wp-block-navigation__responsive-container-content > :not(ul),
+header nav .wp-block-site-logo {
+	display: none;
+}
+
+nav ul.wp-block-navigation__container {
+	gap: 50px;
+}
+.group-logo {
+	gap: 100px!important;
+}
+
+.btn a {
+	width: 15.625vw;
+	min-width: max-content;
+	max-width: 250px;
+	height: 50px;
+	font-size: 14px!important;
+	font-family: Montserrat;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 0px;
+	padding: 11px 44px;
+	border: 1px solid #000;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	text-transform: uppercase;
+}
+
+.lang {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+/* footer */
+footer > div {
+	padding: 0;
+}
+footer * {
+	margin-top: 0!important;
+}
+footer a, footer span {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 28px;
+}
+.btn-2 img {
+	margin-right: 20px;
+}
+.btn-2 a {
+	padding: 0;
+	font-size: 14px!important;
+	font-family: Montserrat;
+	line-height: 30px;
+	text-align: center;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	text-transform: uppercase;
+}
+.main-container {
+	flex-wrap: wrap!important;
+	justify-content: space-evenly!important;
+	height: 60px;
+}
+
+
+@media (max-width: 1023px) {
+
+	.header > .button-block {
+		display: none!important;
+	}
+	.header .lang {
+		display: none;
+	}
+	.header .group-logo {
+		display: contents;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	body {
+		margin: 0;
+	}
+
+	header.wp-block-template-part {
+		padding: 60px 20px 30px;
+	}
+
+	header nav > button.wp-block-navigation__responsive-container-open {
+		display: flex!important;
+	}
+	header nav > div.wp-block-navigation__responsive-container {
+		display: none!important;
+	}
+	header nav > div.wp-block-navigation__responsive-container.is-menu-open {
+		display: flex!important;
+		padding: 60px 20px 20px;
+	}
+	header nav .wp-block-navigation__responsive-container-content {
+		display: block!important;
+	}
+	header nav ul {
+		gap: 40px!important;
+		align-content: center;
+		align-items: center!important;
+	}
+	header nav ul span {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 140%;
+	}
+	header nav ul {
+		margin: 0 0 70px!important;
+	}
+	header nav .wp-block-site-logo {
+		display: inline-block;
+	}
+	header nav .wp-block-navigation__responsive-container-content > :not(ul) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-direction: column;
+	}
+	header .wp-block-navigation__responsive-container-close {
+		top: 15.5px;
+	}
+	header nav .btn {
+		width: 100%; 
+	}
+	header nav .btn > a {
+		border: none;
+		background-color: #323232!important;
+		color: #fff!important;
+		width: 335px;
+		max-width: 335px;
+	}
+
+
+	footer .wrap,
+	footer ul.wp-block-navigation__container {
+		flex-direction: column;
+	}
+
+	footer .main-container {
+		gap: 30px;
+		height: auto;
+		flex-direction: column;
+	}
+	footer nav ul.wp-block-navigation__container {
+		gap: 15px!important;
+	}
+
+	footer .wp-block-spacer {
+		height: 40px!important;
+	}
+
+
+}
+
+@media (max-width: 399px) {
+
+	header nav .wp-block-buttons {
+		width: 100%; 
+	}
+	header nav .btn > a {
+		width: 100%;
+		max-width: 335px;
+	}
+
+}
+
+
+
+
+/* custom sections */
+.pediatric * {
+	margin: 0 0 20px 0;
+}
+.pediatric img {
+	min-height: 550px;
+}
+.pediatric .btn > a {
+	border: none;
+}
+.pediatric .wp-block-cover__inner-container {
+	top: 60px;
+    margin: 0;
+    position: absolute;
+}
+.pediatric-preheader span {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px!important;
+	line-height: 28px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.pediatric-header {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 140%;
+}
+.pediatric-excerpt {
+	max-width: 500px;
+	display: inline-block;
+    text-align: center;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 140%;
+}
+.background-image {
+	padding: 0;
+}
+.background-image > img {
+	position: initial!important;
+}
+.background-image .btn > a {
+	width: 250px;
+}
+
+
+.welcome mark {
+	font-size: inherit;
+}
+.welcome > div {
+	max-width: 500px;
+}
+.welcome .btn-2 a {
+	font-style: normal;
+	font-weight: 600;
+	line-height: 28px;
+}
+.welcome .title {
+	margin: 0 0 30px;
+}
+.welcome .title,
+.welcome .title > * {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 44px;
+}
+.welcome p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 140%;
+	margin: 0 0 50px 0;
+}
+
+
+@media (max-width: 767px) {
+
+	.pediatric .wp-block-cover__inner-container {
+		top: 0;
+	}
+	.pediatric .wp-block-cover__inner-container > * {
+		margin: 20px;
+	}
+
+	.pediatric-preheader span {
+		font-size: 14px!important;
+	}
+
+	.pediatric-header {
+		font-size: 48px;
+	}
+	.pediatric-excerpt {
+		font-size: 16px;
+	}
+
+	.welcome {
+		display: block!important;
+		margin: 0 20px;
+	}
+	.welcome > figure > img {
+		margin-bottom: 30px;
+	}
+	.welcome div.wp-block-media-text__content {
+		padding: 0;
+	}
+	.welcome .title {
+		margin: 0 0 20px;
+	}
+	.welcome .title,
+	.welcome .title > * {
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.welcome p {
+		font-size: 16px;
+	}
+
+	.wp-block-spacer {
+		height: 50px!important;
+	}
+
+}
+
+@media (max-width: 599px) {
+
+	.pediatric * {
+		text-align: left;
+	}
+
+}
+
+@media (max-width: 425px) {
+
+	.background-image .btn {
+		width: 100%; 
+	}
+	.background-image .btn > a {
+		width: 100%;
+		max-width: 100%;
+	}
+
+}
+
+
+/* speakers page */
+.speakers-container {
+	margin: 0 450px 0 200px;
+}
+.speakers-total-info {
+	gap: 130px!important;
+}
+.speakers-total-info figure img {
+	min-width: 250px;
+}
+.speakers-info {
+	gap: 30px;
+	max-width: 470px;
+}
+.speakers-info h2.wp-block-post-title {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 34px;
+}
+.speakers-info p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+}
+.sessions-block {
+	margin: 0!important;
+}
+.sessions-block * {
+	margin: 0;
+}
+.sessions-title {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 29px;
+	margin: 50px 0;
+}
+.sessions-list {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.mob-100 {
+	margin: 0!important;
+}
+
+@media (max-width: 1439px) {
+	.speakers-container {
+		margin: 0 auto 0 200px;
+	}
+	.speakers-total-info {
+		gap: 100px!important;
+	}
+}
+
+@media (max-width: 1023px) {
+	.speakers-container {
+		margin: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.speakers-container {
+		margin: 0 20px;
+	}
+	.speakers-total-info {
+		flex-direction: column;
+		gap: 20px !important;
+	}
+	.speakers-info {
+		gap: 30px!important;
+	}
+	.sessions-title {
+		margin: 0 0 35px;
+	}
+	.sessions-list {
+		gap: 20px;
+	}
+	.mob-100 {
+		height: 100px!important;
+	}
+}
+
+@media (max-width: 375px) {
+
+	.speakers-total-info figure {
+		width: 100%;
+	}
+
+}
+
+/* ajax posts list */
+.main {
+	margin: 0 auto 0 200px;
+}
+
+.title-filter {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.title-filter .header {
+	font-weight: 700;
+}
+
+.filters {
+	position: fixed;
+    width: 280px;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0 20px;
+    left: -320px;
+    background-color: #fff;
+    box-shadow: -10px 5px 15px 0px #00000000;
+    transition: left .5s ease-in-out, box-shadow .5s cubic-bezier(1, 0, 1, 0);
+    z-index: 10000000000000;
+}
+
+.filters.opened {
+	left: 0;
+	box-shadow: -10px 5px 15px 0px #000;
+	transition: left .5s ease-in-out;
+}
+.filter-icon {
+	height: 25px;
+}
+
+.filters .top-section {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+}
+
+.filters .filters-container {
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.custom-select {
+	width: 100%;
+	position: relative;
+	font-family: Montserrat;
+	cursor: pointer;
+}
+.select-styled {
+	padding: 15px 20px;
+    border-bottom: 1px solid rgb(230,233,240);
+    cursor: pointer;
+}
+.select-options {
+	display: none;
+	position: absolute;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+.select-active {
+	display: block;
+}
+.select-options .item {
+	background: linear-gradient(
+90deg,rgb(230,233,240) 0%,rgb(238,241,245) 100%);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.select-options .item:hover {
+	background: #323232;
+    color: #fff;
+}
+
+.cards {
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 33px;
+}
+.card {
+	background: #fff;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	width: 250px;
+}
+.card-image {
+    height: 180px;
+    width: 180px;
+    margin: 35px 35px 10px;
+}
+.card-image a {
+	font-size: 0;
+}
+.card-image img {
+	height: 100%;
+	width: 100%;
+	filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.1));
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	margin: 0 35px 35px;
+	gap: 10px;
+}
+
+.card-content * {
+	margin: 0; 
+}
+.card-title a {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+.country > p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+
+	color: #808080;
+}
+
+@media (max-width: 1023px) {
+	.main {
+		margin: 0;
+	}
+	.cards {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.main {
+		margin: 0 20px;
+	}
+	.cards {
+	    gap: 15px;
+	}
+	.card {
+		width: 160px;
+	}
+	.card-content {
+		margin: 0 20px 35px;
+	}
+	.card-image {
+	    height: 120px;
+	    width: 120px;
+	    margin: 20px 20px 10px;
+	}
+	.card-title a {
+		font-size: 14px;
+		line-height: 140%;
+	}
+	.country > p {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 374px) {
+	.card {
+		width: 100%;
+	}
+	.card-image {
+	    height: calc(100vw - 80px);
+	    width: calc(100% - 40px);
+	    margin: 20px 20px 10px;
+	}
+}
+
+/* others */
+.wp-block-template-part {
+	margin: 0;
+}
